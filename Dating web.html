@@ -7,15 +7,80 @@
 <body>
 <h1>Please Enter Your Details For Our Dating Website</h1>
 <form>
+<!-- Your face -->
 <fieldset>
-	<legend> Your face</legend>
-	<label id="imagefile">Your image:</label>
-	<input type="file" id="imagefile">
-	<label id="preview"><br>Image preview:</label>
+	<legend>Your Face</legend>
+	<label for="imagefile">Your image:</label>
+	<input type="file" name="imagefile" id="imagefile">
+	<label for="preview"><br>Image preview:</label>
 	<img id="preview">
 </fieldset>
+<!-- Your Generic details -->
+<fieldset>
+	<legend>Your Generic Details</legend>
+	<label for="name">Name:</label>
+	<input type="text" name="name" id="name" required placeholder="Your full name">
 
-<fieldset></fieldset>
+	<label for="gender"><br>Gender:</label>
+	<input type="radio" name="gender" id="gender" required value="male">
+	<span class="gender">Male</span>
+	<input type="radio" name="gender" id="gender" value="female">
+	<span class="gender">Female</span>
+	
+	<label for="age"><br>Age:</label>
+	<input type="number" name="age" id="age" required>
+
+	<label for="birth"><br>Date of Birth:</label>
+	<input type="date" name="birth" id="birth">
+
+	<label for="color"><br>Favorate Color:</label>
+	<input type="color" name="color" id="color">
+
+	<label for="country"><br>Which Country:</label>
+	<select name="country" id="country">
+		<option value="none"></option>
+		<option value="usa">USA</option>
+		<option value="ger">Germany</option>
+		<option value="jp">Japan</option>
+		<option value="tw">Taiwan</option>
+		<option value="br">Brazil</option>
+	</select>
+</fieldset>
+
+<!-- Your indicators-->
+<fieldset>
+	<legend>Your Indicators</legend>
+	<label for="height">Height:</label>
+	<span class="rangetxt">Short</span> <input type="range" name="height" id="height" min="0" max="100"><span class="rangetxt">Tall</span>
+	<label for="salary"><br>Salary:</label>
+	<span class="rangetxt">Poor</span> <input type="range" name="salary" id="salary" min="0" max="100"> <span class="rangetxt">Rich</span>
+</fieldset>
+
+<!-- Your Contact Information-->
+<fieldset>
+	<legend>Your Contact Information</legend>
+	<label for="email">Email:</label>
+	<input type="email" name="email" id="email" required>
+	<label for="mobile"><br>Mobile:</label>
+	<input type="tel" name="mobile" id="mobile">
+	<label for="address"><br>Address:</label>
+	<textarea name="address" id="address"></textarea>
+	<label for="method"><br>Method to contact you:</label>
+	
+	<input type="checkbox" name="method" value="email" id="method">
+	<span class="method">Email</span>
+
+	<input type="checkbox" name="method" value="whatsapp" id="method">
+	<span class="method">Whatsapp</span>
+	
+	<input type="checkbox" name="method" value="inappchat" id="method">
+	<span class="method">In-app chat</span>
+	
+</fieldset>
+
+<input type="submit" value="Submit">
 
 </form>
+
+
 </body>
