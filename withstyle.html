@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dating Web Page</title>
+	<style type="text/css">
+		fieldset {background: lightyellow ;border:10px solid yellow ;margin-bottom:10px ;width:720px;}
+		label {width: 180px; display:inline-block; text-align: right; vertical-align: top}
+		.gender {width:auto; text-align:left}
+		.method {width:auto; text-align:left}
+		.rangetxt {text-align:center; width:60px; color:white;}
+		.low{background-color:red }
+		.high{background-color:purple}
+		textarea{width:360px; height:50px}
+	</style>
+</head>
+<body>
+<h1>Please Enter Your Details For Our Dating Website</h1>
+<form>
+<!-- Your face -->
+<fieldset>
+	<legend>Your Face</legend>
+	<label for="imagefile">Your image:</label>
+	<input type="file" name="imagefile" id="imagefile">
+	<br>
+	<label for="preview">Image preview:</label>
+	<img id="preview">
+</fieldset>
+<!-- Your Generic details -->
+<fieldset>
+	<legend>Your Generic Details</legend>
+	<label for="name">Name:</label>
+	<input type="text" name="name" id="name" required placeholder="Your full name">
+	<br>
+	<label for="gender">Gender:</label>
+	<input type="radio" name="gender" id="male" required value="male">
+	<label class="gender" for="male">Male</label>
+	<input type="radio" name="gender" id="female" value="female">
+	<label class="gender" for="female">Female</label>
+	<br>
+	<label for="age">Age:</label>
+	<input type="number" name="age" id="age" required>
+	<br>
+	<label for="birth">Date of Birth:</label>
+	<input type="date" name="birth" id="birth">
+	<br>
+	<label for="color">Favorate Color:</label>
+	<input type="color" name="color" id="color">
+	<br>
+	<label for="country">Which Country:</label>
+	<select name="country" id="country">
+		<option value="none"></option>
+		<option value="usa">USA</option>
+		<option value="ger">Germany</option>
+		<option value="jp">Japan</option>
+		<option value="tw">Taiwan</option>
+		<option value="br">Brazil</option>
+	</select>
+</fieldset>
+
+<!-- Your indicators-->
+<fieldset>
+	<legend>Your Indicators</legend>
+	<label for="height">Height:</label>
+	<label class="rangetxt low">Short</label> <input type="range" name="height" id="height" min="0" max="100"> <label class="rangetxt high">Tall</label>
+	<br>
+	<label for="salary">Salary:</label>
+	<label class="rangetxt low">Poor</label> <input type="range" name="salary" id="salary" min="0" max="100"> <label class="rangetxt high">Rich</label>
+</fieldset>
+
+<!-- Your Contact Information-->
+<fieldset>
+	<legend>Your Contact Information</legend>
+	<label for="email">Email:</label>
+	<input type="email" name="email" id="email" required>
+	<br>
+	<label for="mobile">Mobile:</label>
+	<input type="tel" name="mobile" id="mobile">
+	<br>
+	<label for="address">Address:</label>
+	<textarea name="address" id="address"></textarea>
+	<br>
+	<label for="method">Method to contact you:</label>
+	
+	<input type="checkbox" name="method" value="email" id="email">
+	<label for="email" class="method">Email</label>
+
+	<input type="checkbox" name="method" value="whatsapp" id="whatsapp">
+	<label for="whatsapp" class="method">Whatsapp</label>
+	
+	<input type="checkbox" name="method" value="inappchat" id="inappchat">
+	<label for="inappchat"class="method">In-app chat</label>
+	
+</fieldset>
+
+<input type="submit" value="Submit">
+
+</form>
+
+
+</body>
