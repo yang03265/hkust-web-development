@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Javascript Game</title>
+	<script type="text/javascript">
+		function main_function(){
+			color = ['aqua', 'beige', 'bisque', 'black', 'gray', 'grey', 'ivory','orchid', 'peru', 'salmon', 'silver', 'tan', 'violet', 'yellow'];
+			color_print= color.join(', ');
+			random_number= Math.floor((Math.random()*14));
+			alert("Random Color is " + color[random_number]);
+			console.log("Random Color is " + color[random_number]);
+			guessed=false;
+			number_of_guesses= 1;
+			myBody=document.getElementsByTagName("body")[0];
+
+
+
+			while (!guessed){
+				result= prompt('I am am think one of these colors: \n' + color_print.toString() + '\nPlease choose a color');
+				if(check_guess(result)){
+					
+
+					return true;
+				}
+				number_of_guesses++;
+			}
+		}
+
+		function check_guess(check_result){
+			if(check_result== color[random_number]){
+				
+				setTimeout(function(){ alert('Bingo!, you are right \n\nThe color is: ' + color[random_number] + '\nThe number of guesses is: ' + number_of_guesses); }, 100);
+				myBody.style.background= check_result;
+				return true;
+			}
+			for(var i in color){
+
+				if(color[i]==check_result){
+					if(color[i]>color[random_number]){
+						alert('Your color is greater than my color');
+					}
+					else if(color[i]<color[random_number]){
+						alert('Your color is less than my color');
+					}
+					return false;
+				}
+
+			}
+			prompt('Sorry, I dont recognize this color');
+			return false;
+		}
+		
+
+
+	</script>
+</head>
+<body onload="main_function()">
+
+</body>
+</html>
