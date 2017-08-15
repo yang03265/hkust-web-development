@@ -12,6 +12,11 @@ $carousel-item-height: 300px;
     padding: $pad-up-down $pad-left-right;
 }
 
+@mixin zero-border($border-top, $border-bottom){
+    border-top: $border-top;
+    border-bottom: $border-bottom;
+}
+
 .row-header {
     @include zero-margin(0px,0px);
 }
@@ -30,6 +35,8 @@ $carousel-item-height: 300px;
     background-color: $background-pale;
     @include zero-margin(20px, 0px);
 }
+
+
 .jumbotron {
     @include zero-margin(70px,30px);
     background: $background-light ;
@@ -73,4 +80,30 @@ body{
     right:0px;
     position: absolute;
     bottom: 0px;
+}
+.modal-content {
+    background-color: $background-pale;
+}
+
+.modal-header {
+    background-color: $background-dark;
+    color: floralwhite;
+
+    .close {
+        color: floralwhite;
+    }
+      @include zero-border(0px, 0px);
+}
+
+
+
+.modal-body {
+    background-color: $background-pale;
+    
+
+}
+
+.modal-footer {
+    background-color: $background-light;
+    @include zero-border(0px, 0px);
 }
